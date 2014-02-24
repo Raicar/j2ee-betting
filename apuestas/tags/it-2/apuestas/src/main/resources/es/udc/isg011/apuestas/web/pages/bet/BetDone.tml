@@ -1,0 +1,26 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	t:type="Layout" t:pageTitle="title" 
+	xmlns:p="tapestry:parameter" t:pageExplanation="pageExplanation">
+
+	<t:if test="bet">
+	
+		<p><h3>${message:title}</h3>
+		</p>
+		<p><strong>${message:question-label}:</strong> ${bet.BetOption.BetType.Question}
+		</p>
+		<p><strong>${message:option-label}:</strong> ${bet.BetOption.Option}
+		</p>
+		<p><strong>${message:amount-label}: </strong>  
+			<t:output value="bet.Money" format="numberFormat"/>
+		</p>
+	
+		<p>
+			<a href="#" t:type="PageLink" t:page="bet/AddBet" t:context="bet.BetOption.BetType.BetTypeId">${message:back}</a>		       
+		</p>
+	
+	<p:else>
+		<p>${message:betNotFound}</p>
+	</p:else>	
+	</t:if>
+    
+</html>

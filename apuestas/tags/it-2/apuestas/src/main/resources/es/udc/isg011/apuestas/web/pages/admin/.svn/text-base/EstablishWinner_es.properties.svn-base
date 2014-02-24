@@ -1,0 +1,13 @@
+title=Establecer ganadora
+title2=Establecer ganadoras a
+futureEvent=No se pode establecer ganadora a un evento que no comenzó
+submit=Establecer las marcadas como ganadoras
+
+pageExplanation=Establecer ganadora
+
+select=Elige
+one=una
+winner=opción ganadora
+some=varias
+winners=opciones ganadoras
+winnerAlreadyEstablished=Ganador ya establecido para este tipo de apuesta.

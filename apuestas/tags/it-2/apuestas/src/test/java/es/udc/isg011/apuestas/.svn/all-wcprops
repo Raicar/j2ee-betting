@@ -1,0 +1,5 @@
+lugin</artifactId>
+										<versionRange>${sqlMavenPlugin.version}</versionRange>
+										<goals>
+											<goal>execute</goal>
+					

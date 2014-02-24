@@ -1,0 +1,10 @@
+pageExplanation=Añadir opción de apuesta
+title=Añadir opción de apuesta
+
+alreadyAddBetOptions=Opciones de apuesta ya establecidas
+option-label=Opción de apuesta
+rateProfit-label=Cuota de ganancia
+betTypeConstrucion=Tipo de apuesta en construcción
+finish-label=Creación de tipo de apuesta finalizada?
+submit=Añadir opcines de apuesta/Finalizar
+javascript_required=Javascript desactivado

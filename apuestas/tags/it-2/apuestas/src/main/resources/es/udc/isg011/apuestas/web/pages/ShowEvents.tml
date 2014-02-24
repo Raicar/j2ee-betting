@@ -1,0 +1,43 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+	t:type="Layout" t:pageTitle="title"
+	t:pageExplanation="pageExplanation">
+
+	<div class="myGrid">
+		<t:grid id="grid" source="eventsGridDataSource" row="event"
+			rowsPerPage="rowsPerPage" exclude="eventId, betTypes, version"
+			reorder="name, date" add="category" t:pagerPosition="top">
+		
+			<p:nameHeader>
+				<h3>${message:eventName-label}</h3>
+			</p:nameHeader>
+		
+			<p:dateHeader>
+				<h3>${message:eventDate-label}</h3>
+			</p:dateHeader>
+			
+			<p:categoryHeader>
+				<h3>${message:category-label}</h3>
+			</p:categoryHeader>
+			
+			<p:nameCell>
+				<a t:type="pagelink" name="eventLink" t:page="eventInformation" t:context="[event.eventId]" href="#">${event.name}</a>
+			</p:nameCell>
+			
+			<p:dateCell>
+				${getDateFormatted(event)}
+			</p:dateCell>
+		
+			<p:categoryCell>
+				${event.category.name}
+			</p:categoryCell>
+		
+			<p:empty>
+				<p>${message:eventsNotFound}.</p>
+			</p:empty>
+		
+		</t:grid>
+	</div>
+	<br/>
+
+</html>

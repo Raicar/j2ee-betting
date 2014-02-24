@@ -1,0 +1,103 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+	t:type="Layout" t:pageTitle="title"
+	t:pageExplanation="pageExplanation">
+
+	<div class="myGrid">
+		<t:grid source="betsGridDataSource" row="bet"
+			rowsPerPage="rowsPerPage" exclude="betId"
+			reorder="date, money, nameEvent, questionBetType, betState" add="nameEvent, questionBetType" t:pagerPosition="top">	
+			
+			<p:dateHeader>
+				<h3>${message:date}</h3>
+			</p:dateHeader>
+			
+			<p:moneyHeader>
+				<h3>${message:amount-label}</h3>
+			</p:moneyHeader>
+			
+			<p:nameEventHeader>
+				<h3>${message:eventName-label}</h3>
+			</p:nameEventHeader>
+			
+			<p:questionBetTypeHeader>
+				<h3>${message:question-label}</h3>
+			</p:questionBetTypeHeader>
+			
+			<p:betStateHeader>
+				<h3>${message:betState}</h3>
+			</p:betStateHeader>
+			
+			<p:dateCell>
+				<span name="betDate"><t:output value="bet.date.Time" format="betDateFormat"/></span>
+			</p:dateCell>
+			
+			<p:moneyCell>
+				<span name="betMoney"><t:output value="bet.money" format="numberFormat"/></span>
+			</p:moneyCell>
+			
+			<p:nameEventCell>
+				<span name="betEvent">${bet.betOption.betType.event.name}</span>
+			</p:nameEventCell>
+			
+			<p:questionBetTypeCell>
+				<span name="betQuestion">${bet.betOption.betType.question}</span>
+			</p:questionBetTypeCell>
+			
+			<p:betStateCell>
+				<a t:type="eventlink" t:event="showThings" t:context="${bet.betId}"  t:zone="thingsZone" href="#">
+					<t:if test="betNotEstablished">${message:NotEstablishedState}</t:if>
+					<t:if test="betWinner">${message:WinnerState}</t:if>
+					<t:if test="betLost">${message:LostState}</t:if>
+				</a>
+			</p:betStateCell>
+				
+			<p:empty>
+				<p>${message:betsNotFound}.</p>
+			</p:empty>
+		</t:grid>
+	</div>
+<br/>
+<t:zone t:id="thingsZone" id="thingsZone">
+	<t:if test="visibleZone">
+		<table class="centered">
+			<tr><td  colspan="3"><h3>${betToShow.betOption.betType.event.name}</h3> 
+			</td></tr>
+			
+			<tr><td  colspan="3"><strong><t:output value="betToShow.betOption.betType.event.date.time" format="dateFormat"/></strong>
+			</td></tr>
+	
+			<tr><td colspan="3"><strong><t:output value="betToShow.betOption.betType.event.date.time" format="hourFormat"/></strong>
+			</td></tr>
+			<tr>
+			   <td><br/><strong>${betToShow.betOption.betType.question}</strong></td>
+  					<td><br/></td>
+			   <td><br/><t:if test="winners"><strong>${message:betOptionsWinners}:</strong></t:if></td>
+			</tr>
+			<tr>
+				<td><t:Loop t:source="betToShow.betOption.betType.betOptions" t:value="betOption">
+					${betOption.option}<br/>
+				</t:Loop></td>
+				<td><br/></td>
+				<td><t:Loop t:source="betToShow.betOption.betType.winners" t:value="betOption">
+					${betOption.option}<br/>
+				</t:Loop></td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/>
+					<strong>${message:yourBet}: </strong> ${betToShow.betOption.option} <br/>
+					<strong>${message:rateProfit}: </strong> ${betToShow.betOption.rateProfit}<br/>
+					<strong>${message:amount-label}: </strong> <t:output value="betToShow.money" format="numberFormat"/><br/>
+					<strong>${message:betState}: </strong>
+					<t:if test="betToShowNotEstablished">${message:NotEstablishedState}</t:if>
+					<t:if test="betToShowWinner">${message:WinnerState}</t:if>
+					<t:if test="betToShowLost">${message:LostState}</t:if>
+				</td>
+			</tr>
+		</table>
+		<br/><br/>
+		<t:actionlink t:id="hideZone">${message:HideZone}</t:actionlink>
+	</t:if>
+</t:zone>
+<br/>
+</html>

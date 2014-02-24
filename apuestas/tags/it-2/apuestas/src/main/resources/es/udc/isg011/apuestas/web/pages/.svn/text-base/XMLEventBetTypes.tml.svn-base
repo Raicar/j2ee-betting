@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<eventBetTypes xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter">
+    
+    <t:if test="event">
+		<event date="${event.date.time}" category="${event.category.name}" name="${event.name}" id="${event.eventId}">
+	    	<t:Loop  t:source="event.betTypes" t:value="betType">
+	    		<betType question="${betType.question}" id="${betType.betTypeId}">
+ 				    <t:Loop  t:source="betType.betOptions" t:value="betOption">
+	    				<betOption rateProfit="${betOption.rateProfit}" option="${betOption.option}" id="${betOption.betOptionId}"/>
+	    			</t:Loop>
+	    		</betType>
+	    	</t:Loop>
+	    </event>
+	    
+    <p:else>
+    	<notFoundEvent/>
+    </p:else>
+    </t:if>
+</eventBetTypes>

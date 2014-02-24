@@ -1,0 +1,16 @@
+footer=Area de Ingeniería Telemática - Universidad de A Coruña
+header=Aplicación Web de Apuestas con Tapestry+Spring+Hibernate
+menu-authenticate=Autenticarse
+menu-home=Inicio
+menu-hello=Hola
+menu-logout=Salir
+menu-updateProfile=Actualizar info. registro
+menu-showBets=Ver apuestas
+menu-welcome=Bienvenido al sitio Web de apuestas
+menu-showBalance=Consultar saldo
+menu-addEvent=Añadir evento
+menu-findEvents=Búsqueda eventos
+menu-selectLanguage=Selección idioma
+
+pageExplanation=Home
+

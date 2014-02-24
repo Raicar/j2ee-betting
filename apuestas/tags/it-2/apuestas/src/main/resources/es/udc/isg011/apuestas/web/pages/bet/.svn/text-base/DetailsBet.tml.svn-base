@@ -1,0 +1,52 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:pageExplanation="pageExplanation"
+	t:type="Layout" t:pageTitle="title">
+	
+	<t:if test="bet">
+	
+	
+	
+		<table class="centered">
+			<tr><td  colspan="3"><h3>${betType.event.name}</h3> 
+			</td></tr>
+			
+			<tr><td  colspan="3"><strong><t:output value="betType.event.date.time" format="dateFormat"/></strong>
+			</td></tr>
+	
+			<tr><td colspan="3"><strong><t:output value="betType.event.date.time" format="hourFormat"/></strong>
+			</td></tr>
+			<tr>
+			   <td><br/><strong>${betType.question}</strong></td>
+  					<td><br/></td>
+			   <td><br/><t:if test="winners"><strong>${message:betOptionsWinners}:</strong></t:if></td>
+			</tr>
+			<tr>
+				<td><t:Loop t:source="betType.betOptions" t:value="betOption">
+					${betOption.option}<br/>
+				</t:Loop></td>
+				<td><br/></td>
+				<td><t:Loop t:source="betType.winners" t:value="betOption">
+					${betOption.option}<br/>
+				</t:Loop></td>
+			</tr>
+			<tr>
+				<td colspan="3"><br/>
+					<strong>${message:yourBet}: </strong> ${bet.betOption.option} <br/>
+					<strong>${message:rateProfit}: </strong> ${bet.betOption.rateProfit}<br/>
+					<strong>${message:amount-label}: </strong> <t:output value="bet.money" format="numberFormat"/><br/>
+					<strong>${message:betState}: </strong>
+					<t:if test="betNotEstablished">${message:NotEstablishedState}</t:if>
+					<t:if test="betWinner">${message:WinnerState}</t:if>
+					<t:if test="betLost">${message:LostState}</t:if>
+				</td>
+			</tr>
+		</table>
+	
+	</t:if>
+	<br/>
+ 		<a href="#" t:type="PageLink" t:page="bet/showBets" t:context="false">${message:back}</a>
+	
+	
+</html>
+	

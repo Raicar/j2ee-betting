@@ -1,0 +1,9 @@
+Id);
+
+-- ------------------------------ Category ----------------------------------
+
+CREATE TABLE Category(
+	categoryId BIGINT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(40) NOT NULL,
+	CONSTRAINT Category_PK PRIMARY KEY (categoryId),
+	CONSTRAINT Category_name_unique UNIQUE (name

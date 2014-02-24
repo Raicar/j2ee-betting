@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice
+END
+EventStartedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/EventStartedException.java
+END
+AdminService.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/AdminService.java
+END
+BetTypeWithEmptyBetOptionsListException.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/BetTypeWithEmptyBetOptionsListException.java
+END
+InvalidDateOfEventException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/InvalidDateOfEventException.java
+END
+AdminServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/AdminServiceImpl.java
+END
+DuplicateBetOptionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/DuplicateBetOptionException.java
+END
+NonMultipleChoiceBetTypeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/NonMultipleChoiceBetTypeException.java
+END
+DuplicateBetTypeQuestionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/DuplicateBetTypeQuestionException.java
+END
+MismatchedBetTypeBetOptionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/MismatchedBetTypeBetOptionException.java
+END
+WinnerAlreadySetException.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/adminservice/WinnerAlreadySetException.java
+END

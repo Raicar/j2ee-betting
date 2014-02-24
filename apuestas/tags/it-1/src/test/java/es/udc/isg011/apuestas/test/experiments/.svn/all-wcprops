@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/test/java/es/udc/isg011/apuestas/test/experiments
+END
+DaoExperiments.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/test/java/es/udc/isg011/apuestas/test/experiments/DaoExperiments.java
+END
+SessionExperiments.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/test/java/es/udc/isg011/apuestas/test/experiments/SessionExperiments.java
+END
+HibernateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/test/java/es/udc/isg011/apuestas/test/experiments/HibernateUtil.java
+END
+UserServiceExperiments.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/test/java/es/udc/isg011/apuestas/test/experiments/UserServiceExperiments.java
+END

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listEvents xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter">    
+    
+    <t:if test="totalNumber">
+		<t:Loop  t:source="events" t:value="event">
+			<event date="${event.date.time}" category="${event.category.name}" name="${event.name}" id="${event.eventId}" />
+		</t:Loop>
+		<p:else>
+			<notFoundEvents/>
+		</p:else>
+	</t:if>
+</listEvents>

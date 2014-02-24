@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>es.udc.isg011.apuestas</groupId>
+    <artifactId>apuestas</artifactId>
+    <packaging>war</packaging>
+    <version>1.0.0</version>
+    <name>${project.artifactId} Project</name>
+
+    <!--
+        ===================================================================
+    -->
+    <!--
+        Default values for properties. These default values are expected
+        to be valid for most profiles. Specific profiles can overwrite
+        values when necessary.
+    -->
+    <properties>
+        <!--  Data source properties -->
+        <dataSource.user>pojo</dataSource.user>
+        <dataSource.password>pojo</dataSource.password>
+        <dataSource.jndiName>jdbc/pojo-examples-ds</dataSource.jndiName>
+        <testDataSource.user>${dataSource.user}</testDataSource.user>
+        <testDataSource.password>${dataSource.password}

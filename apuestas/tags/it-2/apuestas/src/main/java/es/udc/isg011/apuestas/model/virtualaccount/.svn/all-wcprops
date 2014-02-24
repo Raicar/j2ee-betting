@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/virtualaccount
+END
+VirtualAccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/virtualaccount/VirtualAccount.java
+END
+VirtualAccountDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/virtualaccount/VirtualAccountDao.java
+END
+VirtualAccountDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/virtualaccount/VirtualAccountDaoHibernate.java
+END

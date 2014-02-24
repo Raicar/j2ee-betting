@@ -1,0 +1,95 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+	t:type="Layout" t:pageTitle="title" 
+	t:pageExplanation="pageExplanation">
+
+	<t:if test="event">
+		<t:if test="notStarted">
+			
+			<form t:type="Form" t:id="addBetTypeForm">
+				<t:errors/>
+				<table class="centered">
+					<tr><td><h3>${event.name}</h3> 
+					</td></tr>
+					<tr><td><strong><t:output value="event.date.time" format="dateFormat"/></strong>
+					</td></tr>
+					<tr><td><strong><t:output value="event.date.time" format="hourFormat"/></strong>
+					</td></tr>
+					<tr><td>
+						<br/>
+						<t:label for="question"/>
+						<span class="entry">
+							<input t:id="question" t:type="TextField" t:validate="required" size="16" maxlength="30" />
+						</span>
+					</td></tr>
+					<tr><td>
+						<t:label for="multipleWinner"/>
+						<span class="entry">
+							<input t:id="multipleWinner" t:type="checkbox" />
+						</span>
+					</td></tr>
+				</table>
+				<t:if test="betType.betOptions.empty">
+					<p:else>
+						<table  class="centered">
+							<tr><td colspan="2"><br/><strong>${message:alreadyAddBetOptions}:</strong></td></tr>
+							<tr>
+								<td>${message:option-label}</td>
+								<td>${message:rateProfit-label}</td>
+							</tr> 
+							<tr t:type="Loop"  t:source="betType.betOptions" t:value="betOption" encoder="betOptionEncoder">
+								<td>
+									${betOption.option}
+								</td>
+								<td>
+									${betOption.rateProfit}
+								</td>
+							</tr>	
+						</table>										
+					</p:else>
+				</t:if>
+				<table class="centered">
+					<tr>
+						<td><br/>
+							<t:label for="option"/>
+							<span class="entry">
+								<input t:id="option" t:type="TextField"  value="option" t:validate="required" size="16" maxlength="30" />
+							</span>
+						</td>
+						<td><br/>
+							<t:label for="rateProfit"/>
+							<span class="entry">
+								<input t:id="rateProfit" t:type="TextField" value="rateProfit" t:validate="required,min=0" size="16" maxlength="30" />
+							</span>
+						</td>
+					</tr>
+					<tr><td colspan="2">
+						<t:label for="finish"/>
+						<span class="entry">
+							<input t:id="finish" t:type="checkbox" />
+						</span>
+					</td></tr>
+					<tr><td colspan="2"><br/>
+						<input type="submit" value="${message:submit}"/>        
+					</td></tr>
+				</table>
+			</form>
+			<p:else>
+				<p>${message:eventStarted}</p>
+			</p:else>
+		</t:if>
+		<div>
+			<br/>
+			<a href="#" t:type="PageLink" t:page="eventInformation" t:context="event.eventId" >${message:backToEventInfo}</a>
+		</div>
+		<br/>
+		<p:else>
+			<p>${message:eventNotFound}</p>
+		</p:else>
+	</t:if>
+	<noscript>
+		${message:javascript_required}	
+	</noscript>
+	
+	
+</html>

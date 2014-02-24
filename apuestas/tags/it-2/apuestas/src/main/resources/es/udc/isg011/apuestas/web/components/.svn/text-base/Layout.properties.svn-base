@@ -1,0 +1,15 @@
+footer=Area of Telematics Engineering - University of A Coruña
+header=Betting Web Application with Tapestry+Spring+Hibernate
+menu-authenticate=Authenticate
+menu-home=Home
+menu-hello=Hello
+menu-logout=Logout
+menu-updateProfile=Update profile
+menu-showBets=Show bets
+menu-welcome=Welcome to Betting Site
+menu-showBalance=Show balance
+menu-addEvent=Add event
+menu-findEvents=Find events
+menu-selectLanguage=Select Language
+
+pageExplanation=Home

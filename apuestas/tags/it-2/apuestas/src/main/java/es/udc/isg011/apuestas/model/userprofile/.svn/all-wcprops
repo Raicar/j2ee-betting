@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/userprofile
+END
+UserProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/userprofile/UserProfile.java
+END
+UserProfileDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/userprofile/UserProfileDao.java
+END
+UserProfileDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/userprofile/UserProfileDaoHibernate.java
+END

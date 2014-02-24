@@ -1,0 +1,42 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+   t:pageExplanation="pageExplanation"
+   t:type="Layout" t:pageTitle="title">
+   
+	<t:if test="betType">
+		<t:if test="started">
+	   		<t:if test="betType.establishedWinner">
+       			<p>${message:winnerAlreadyEstablished}</p>
+				<p:else>
+					<form t:type="Form" t:id="establishWinnerForm">
+						<t:errors/>
+						<h3>${message:title2} ${betType.question}</h3>
+						${message:select}
+						<t:if test="betType.multipleWinner">
+							<strong> ${message:some} </strong>${message:winners}
+							<p:else>
+								<strong> ${message:one} </strong>${message:winner}
+							</p:else>
+						</t:if>
+		
+						<t:checklist t:id="checklist" t:model="betOptionIdsModel" t:selected="selectedBetOptionIds" t:encoder="betOptionIdsEncoder" t:disable="false" >
+			            </t:checklist>
+						<div class="button">
+			       		    <input type="submit" value="${message:submit}"/>        
+				        </div>
+		      		</form>
+	      		</p:else>
+      		</t:if>
+      		<br/>
+      		<p:else>
+      			<p>${message:futureEvent}</p>
+    		</p:else>
+   		</t:if>
+   		<div>
+   			<a href="#" t:type="PageLink" t:page="eventInformation" t:context="event.eventId" >${message:backToEventInfo}</a>		       
+		</div>
+	   <p:else>
+	      <p>${message:betTypeNotFound}</p>
+	   </p:else>
+	</t:if>
+</html>

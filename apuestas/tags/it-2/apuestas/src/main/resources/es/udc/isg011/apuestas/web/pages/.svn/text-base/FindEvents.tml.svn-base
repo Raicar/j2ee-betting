@@ -1,0 +1,26 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	t:type="Layout" t:pageTitle="title"
+	t:pageExplanation="pageExplanation">
+	
+	<form t:type="Form" t:id="findEventsForm">
+		<t:errors/>
+
+		<table class="centered">
+			<tr>
+				<td><br/>
+					<t:label for="keyWords"/>
+					<input t:id="keyWords" t:type="TextField" size="15" maxlength="30" />				
+				</td>
+			</tr>
+			<tr>
+				<td><br/>
+					<t:label for="category"/>
+					<t:select t:id="category" model="categories"/>
+				</td>
+			</tr>
+			<tr><td><br/>
+	        	<input type="submit" value="${message:submit}"/>        
+			</td></tr>
+		</table>
+	</form>
+</html>

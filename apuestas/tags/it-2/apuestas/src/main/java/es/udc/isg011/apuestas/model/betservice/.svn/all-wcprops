@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice
+END
+BetService.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice/BetService.java
+END
+InsufficientBalanceException.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice/InsufficientBalanceException.java
+END
+BetServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice/BetServiceImpl.java
+END
+IncorrectBalanceException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice/IncorrectBalanceException.java
+END
+BetNotBelongUserException.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice/BetNotBelongUserException.java
+END
+BetAfterEventStartedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/betservice/BetAfterEventStartedException.java
+END

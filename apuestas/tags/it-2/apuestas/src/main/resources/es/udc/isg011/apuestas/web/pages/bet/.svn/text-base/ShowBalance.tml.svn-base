@@ -1,0 +1,9 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	t:type="Layout" t:pageTitle="title" 
+	t:pageExplanation="pageExplanation">
+	<p>
+		<h3>${message:balance-label}</h3> 
+		<h2  name="balance"><t:output value="balance" format="numberFormat"/></h2>
+	</p>
+
+</html>

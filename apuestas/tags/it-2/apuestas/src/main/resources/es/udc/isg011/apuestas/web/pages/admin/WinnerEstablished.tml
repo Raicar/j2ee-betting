@@ -1,0 +1,33 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter"
+    t:pageExplanation="pageExplanation"
+	t:type="Layout" t:pageTitle="title">
+
+   
+   <t:if test="betType">
+	  <h3>${event.name}</h3>
+      <t:if test="betType.winners">
+	      <p>${message:betType}<strong> ${betType.question} </strong>${message:are}:
+	      </p>
+         <table class="centered">
+            <tr t:type="Loop" t:source="betType.winners" t:value="betOption">
+               <td>
+                  ${betOption.option}
+               </td>
+            </tr>
+         </table>
+
+         <p:else>
+            <p>${message:noWinnerOptions} <strong> ${betType.question} </strong></p>
+         </p:else>
+      </t:if>
+	   	<br/>
+		<div>
+			<a href="#" t:type="PageLink" t:page="eventInformation" t:context="event.eventId" >${message:backToEventInfo}</a>		       
+		</div>
+      <p:else>
+         <p>${message:betTypeNotFound}</p>
+      </p:else>
+	</t:if>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	  xmlns:p="tapestry:parameter">
+
+<head>
+	<title>${pageTitle}</title>
+	<link rel="StyleSheet" href="${context:/css/styles.css}"
+		  type="text/css" media="all"/>
+</head>
+
+<body>
+
+<!-- Window. -->
+
+<div id="window">
+
+<!-- Page title. -->
+
+<div id="pageTitle">
+	<div align="center">
+       ${message:header}
+	</div>
+</div>
+
+
+
+<!-- Menu. -->
+   
+
+<div id="menuWelcome">
+ 		<t:if test="userSession">
+			${message:menu-hello} <span id="name">${userSession.firstName}</span>
+           <p:else>
+           	${message:menu-welcome}
+           </p:else>
+	</t:if>
+	<t:if test="pageExplanation">
+	 	<span id="pageExplanation">
+ 			 - ${pageExplanation}
+ 		</span>
+	</t:if>
+	<span id="menuLanguage">
+		
+			<a href="#" t:type="eventlink" t:event="language" t:context="'es'">
+				<img src="${asset:images/sp.png}" />
+			</a>
+			<a href="#" t:type="eventlink" t:event="language" t:context="'gl'">
+				<img src="${asset:images/ga.png}" />
+			</a>
+			<a href="#" t:type="eventlink" t:event="language" t:context="'en'">
+				<img src="${asset:images/uk.png}" />
+			</a>
+	</span>
+</div>
+<div id="sidebar">
+	
+	<ul>
+ 
+	
+    <t:if test="menuExplanation">
+	 	<span id="menuExplanation">
+ 			${menuExplanation}
+ 		</span>
+        <p:else>
+		    <span id="menuLinks">
+	
+			<a href="#" t:type="PageLink" t:page="Index"><li>${message:menu-home}</li></a>
+	    	<a href="#" t:name="findEvents" t:type="PageLink" t:page="findEvents"><li>${message:menu-findEvents}</li></a>
+		    	
+				<t:if test="userSession">
+				    
+				    <t:if test="userSession.admin">
+				    	<a href="#" t:type="PageLink" t:page="admin/AddEvent"><li>${message:menu-addEvent}</li></a>
+				    	<p:else>
+					    	<a href="#" t:name="showBalance" t:type="PageLink" t:page="bet/ShowBalance"><li>${message:menu-showBalance}</li></a>
+				    		<a href="#" t:name="showBets" t:type="PageLink" t:page="bet/ShowBets" t:context="true" ><li>${message:menu-showBets}</li></a>				    		
+				   		</p:else>
+					</t:if>		
+					
+				    <a href="#" t:name="update" t:type="PageLink" t:page="user/UpdateProfile"><li>${message:menu-updateProfile}</li></a>
+					
+				    <a href="#" t:name="logout" t:type="ActionLink" t:id="logout"><li>${message:menu-logout}</li></a>
+				    
+			    	<p:else>
+				    	<a href="#" t:name="authenticate" t:type="PageLink" t:page="user/Login"><li>${message:menu-authenticate}</li></a>
+			   		</p:else>
+				</t:if>
+			<a href="#" t:type="PageLink" t:page="selectLanguage"><li>${message:menu-selectLanguage}</li></a>
+			</span>
+        </p:else>
+ 	</t:if>
+ 	
+ 	</ul>
+
+</div>
+
+
+<!-- Content. -->
+
+<div id="content">
+  	<t:body/>
+</div>
+
+
+<!-- Body footer. -->
+
+<div id="footer">
+    <div align="center">
+       ${message:footer}
+    </div>
+</div>
+
+<!-- End of "window" id. -->
+
+</div>
+
+<!-- End of HTML body. -->
+
+</body>
+
+</html>

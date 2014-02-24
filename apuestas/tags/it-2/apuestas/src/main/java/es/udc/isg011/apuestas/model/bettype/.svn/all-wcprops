@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/bettype
+END
+BetType.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/bettype/BetType.java
+END
+BetTypeDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/bettype/BetTypeDao.java
+END
+BetTypeDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/bettype/BetTypeDaoHibernate.java
+END

@@ -1,0 +1,61 @@
+10
+
+dir
+576
+https://svn.fic.udc.es/ei5/is/12-13/isg011/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model
+https://svn.fic.udc.es/ei5/is/12-13/isg011
+
+
+
+2013-02-21T11:25:59.094591Z
+228
+nuria.losada
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d153a9d0-e7ac-47ad-9cea-f127fa5bad2a
+
+category
+dir
+
+util
+dir
+
+userprofile
+dir
+
+userservice
+dir
+
+event
+dir
+
+betoption
+dir
+
+virtualaccount
+dir
+
+adminservice
+dir
+
+bet
+dir
+
+betservice
+dir
+
+bettype
+dir
+

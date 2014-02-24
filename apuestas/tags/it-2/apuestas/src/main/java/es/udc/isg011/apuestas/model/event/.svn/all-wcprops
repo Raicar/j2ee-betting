@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/event
+END
+Event.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/event/Event.java
+END
+EventDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/event/EventDao.java
+END
+EventDaoHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/model/event/EventDaoHibernate.java
+END

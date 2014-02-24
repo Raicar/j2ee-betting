@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/main/java/es/udc/isg011/apuestas/model/userservice
+END
+UserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/main/java/es/udc/isg011/apuestas/model/userservice/UserService.java
+END
+UserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/main/java/es/udc/isg011/apuestas/model/userservice/UserServiceImpl.java
+END
+UserProfileDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/main/java/es/udc/isg011/apuestas/model/userservice/UserProfileDetails.java
+END
+IncorrectPasswordException.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/ei5/is/12-13/isg011/!svn/ver/67/apuestas/tags/it-1/src/main/java/es/udc/isg011/apuestas/model/userservice/IncorrectPasswordException.java
+END

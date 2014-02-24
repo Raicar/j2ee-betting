@@ -1,0 +1,86 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:pageExplanation="pageExplanation"
+	t:type="Layout" t:pageTitle="title">
+	
+<t:if test="event">
+
+	<table class="centered">
+		
+		<tr><td><h3>${event.name}</h3> 
+		</td></tr>
+		
+		<tr><td><strong><t:output value="event.date.time" format="dateFormat"/></strong>
+		</td></tr>
+
+		<tr><td><strong><t:output value="event.date.time" format="hourFormat"/></strong>
+		</td></tr>
+
+		
+		<t:if test="betTypes">
+			<tr><td><br/>${message:betTypeAvailable}:
+			</td></tr>	
+				
+			<tr><td>
+			</td></tr>	
+			<tr t:type="Loop" t:source="betTypes" t:value="betType">
+			    <t:if test="userSession">
+				    <t:if test="userSession.admin">
+			    		 <td>
+		 				    <t:if test="started">
+		 				   		<t:if test="betType.establishedWinner">
+									${betType.question}
+		 				   			<p:else>
+										<a href="	#" t:type="PageLink"  t:name="betTypeLink" t:page="admin/EstablishWinner" t:context="betType.betTypeId">${betType.question}</a>
+									</p:else>
+								</t:if>
+								<p:else>
+						    		<a href="#" t:type="PageLink" t:name="betTypeLink" t:page="bet/AddBet" t:context="betType.betTypeId">${betType.question}</a>
+								</p:else>
+	
+						    </t:if>
+	    		 		</td>
+						<p:else>
+							<td>
+					    		<a href="#" t:type="PageLink"  t:name="betTypeLink"  t:page="bet/AddBet" t:context="betType.betTypeId">${betType.question}</a>
+				    		</td>
+						</p:else>
+				    </t:if>
+					<p:else>
+						<td>
+				    		<a href="#" t:type="PageLink"  t:name="betTypeLink" t:page="bet/AddBet" t:context="betType.betTypeId">${betType.question}</a>
+			    		</td>
+					</p:else>
+		   		</t:if>
+			</tr>
+			
+			<p:else>
+				<tr><td><br/>${message:noBetTypeAvailables}
+				</td></tr>		
+			</p:else>
+		</t:if>
+		
+		
+	</table>
+
+	<br/>
+    <t:if test="userSession">
+	    <t:if test="userSession.admin">
+	    	<t:if test="started">
+				<p:else>
+					<a t:type="eventlink" t:event="addBetType"  t:zone="zone" href="#">${message:addBetType}</a>
+					<t:zone t:id="zone">
+					</t:zone>
+				</p:else>
+	    	</t:if>
+	    </t:if>
+    </t:if>
+
+	<p:else>
+		<p>${message:eventNotFound}</p>
+	</p:else>
+</t:if>
+	<br/>
+	<a href="#" t:type="PageLink" t:page="showEvents" >${message:backToShowEvents}</a>
+
+</html>

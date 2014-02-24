@@ -1,0 +1,82 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:pageExplanation="pageExplanation"
+	t:type="Layout" t:pageTitle="title">
+	
+	
+	<t:zone t:id="zone">
+	<t:if test="event">
+		<t:if test="notStarted">
+			<form t:id="addBetTypeForm" t:type="form">
+							<t:errors/>
+							
+				<table class="centered">
+					<tr><td colspan="3"><h3>${event.name}</h3> 
+					</td></tr>
+					
+					<tr><td colspan="3"><strong><t:output value="event.date.time" format="dateFormat"/></strong>
+					</td></tr>
+			
+					<tr><td colspan="3"><strong><t:output value="event.date.time" format="hourFormat"/></strong>
+					</td></tr>
+					<tr><td colspan="3"><br/>
+							<t:label for="question"/>
+							<span class="entry">
+								<input t:id="question" t:type="TextField" t:validate="required" size="16" maxlength="30" />
+							</span>
+						
+					</td></tr>
+					<tr><td colspan="3">
+							<t:label for="multipleWinner"/>
+							<span class="entry">
+								<input t:id="multipleWinner" t:type="checkbox" />
+							</span>
+					</td></tr>
+
+					<th colspan="3"><br/>${message:betOpionsList}:</th>
+					<tr><td></td></tr>
+				</table>
+				<table class="centered" id="tableAjaxForm">
+
+					<tr t:type="AjaxFormLoop" t:source="idOptionRates" t:value="idOptionRate" t:encoder="betOptionEncoder">
+						<td>
+							<t:label for="option"/>
+							<span class="entry">
+								<input t:id="option" t:type="TextField"  value="idOptionRate.option" t:validate="required" size="16" maxlength="30" />
+							</span>
+						</td>
+						<td>
+							<t:label for="rateProfit"/>
+							<span class="entry">
+								<input t:id="rateProfit" t:type="TextField" value="idOptionRate.rateProfit" t:validate="required,min=0" size="16" maxlength="30" />
+							</span>
+						</td>
+						<td><t:removerowlink>${message:remove}</t:removerowlink></td>
+						<p:addRow>
+							<td colspan="3"><br/>
+								<t:addrowlink>${message:add}</t:addrowlink>
+							</td>
+						</p:addRow>
+					</tr>
+				</table>
+
+				<br/>
+				<div class="button"><input type="submit" value="${message:submit}"/>
+				</div>
+			</form>			
+			<p:else>
+				<p>${message:eventStarted}</p>
+			</p:else>
+		</t:if>
+		<div>
+			<br/>
+			<a href="#" t:type="PageLink" t:page="eventInformation" t:context="event.eventId" >${message:backToEventInfo}</a>
+		</div>
+		<br/>
+		<p:else>
+			<p>${message:eventNotFound}</p>
+		</p:else>
+	</t:if>
+	</t:zone>
+	
+</html>

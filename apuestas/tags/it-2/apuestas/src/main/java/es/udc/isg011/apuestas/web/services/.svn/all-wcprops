@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services
+END
+AuthenticationPolicyWorker.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/AuthenticationPolicyWorker.java
+END
+SessionFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/SessionFilter.java
+END
+ComponentEventAuthenticationFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/ComponentEventAuthenticationFilter.java
+END
+AuthenticationPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/AuthenticationPolicy.java
+END
+AuthenticationPolicyType.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/AuthenticationPolicyType.java
+END
+PageRenderAuthenticationFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/PageRenderAuthenticationFilter.java
+END
+AuthenticationValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/AuthenticationValidator.java
+END
+AppModule.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/ei5/is/12-13/isg011/!svn/ver/232/apuestas/tags/it-2/apuestas/src/main/java/es/udc/isg011/apuestas/web/services/AppModule.java
+END

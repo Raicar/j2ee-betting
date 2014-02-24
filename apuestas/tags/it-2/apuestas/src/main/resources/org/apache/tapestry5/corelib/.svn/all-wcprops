@@ -1,0 +1,10 @@
+NTPOINT}" || exit 1
+    rm -f .X*-lock
+
+    case "${TMPTIME}" in
+        -*|infinite|infinity)
+	    exit 0
+	    ;;
+    esac
+
+    if [ "${TMPTIME}" = "0

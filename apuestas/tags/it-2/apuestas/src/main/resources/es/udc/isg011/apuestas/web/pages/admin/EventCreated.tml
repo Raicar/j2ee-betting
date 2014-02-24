@@ -1,0 +1,34 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter"
+	t:pageExplanation="pageExplanation"
+	t:type="Layout" t:pageTitle="title">
+	
+
+	<t:if test="event">
+	
+		<table class="centered">
+			<tr><td><h3>${event.name}</h3> 
+			</td></tr>
+			
+			<tr><td><strong><t:output value="event.date.time" format="dateFormat"/></strong>
+			</td></tr>
+	
+			<tr><td><strong><t:output value="event.date.time" format="hourFormat"/></strong>
+			</td></tr>
+		</table>	
+		<br/>
+		${message:eventCreated}.
+		<div>
+		<br/>
+			<a href="#" t:type="PageLink" t:page="EventInformation" t:context="eventId">${message:administrateEvent}</a>		       
+		</div>
+		<br/>
+		<div>
+			<a href="#" t:type="PageLink" t:page="admin/AddEvent">${message:createAnotherEvent}</a>		       
+		</div>
+		
+		<p:else>
+			<p>${message:eventNotFound}</p>
+		</p:else>
+	</t:if>
+</html>

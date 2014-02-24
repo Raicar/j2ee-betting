@@ -1,0 +1,47 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	t:type="Layout" t:pageTitle="title" 
+	t:pageExplanation="pageExplanation">
+	
+	<form t:type="Form" t:id="addEventForm">
+		<t:errors/>
+		<table class="centered">
+			<tr><td colspan="2"><br/>
+			    <t:label for="eventName"/>
+		        <span class="entry">    
+		            <input t:id="eventName" t:type="TextField"
+					       t:validate="required" 
+					       size="20" maxlength="30" />
+		        </span>
+			</td></tr>
+		    
+			<tr><td colspan="2"><br/>
+				<t:label for="eventDate"/>
+				 <span class="entry">    
+				     <input t:id="eventDate" t:type="TextField"
+						   t:validate="required"
+						   size="10"  maxlength="10" />
+				 </span>
+			</td></tr>
+			<tr><td><br/>
+				<t:label for="hour"/>
+	        	<span class="entry">
+	        		<t:select t:id="hour" model="hours" validate="required"/>
+	        	</span>   
+		    </td><td><br/>
+		    	<t:label for="minute"/>
+	        	<span class="entry">
+	        		<t:select t:id="minute" model="minutes" validate="required"/>
+	        	</span> 
+		    </td></tr>
+			<tr><td colspan="2"><br/>
+			 	<t:label for="category"/>
+	        	<span class="entry">
+	        		<t:select t:id="category" model="categories" validate="required"/>
+	        	</span>
+	  		</td></tr>
+	  		<tr><td colspan="2"><br/>
+		        <input type="submit" value="${message:submit}"/>        
+	  		</td></tr>
+		</table>
+	</form>
+</html>

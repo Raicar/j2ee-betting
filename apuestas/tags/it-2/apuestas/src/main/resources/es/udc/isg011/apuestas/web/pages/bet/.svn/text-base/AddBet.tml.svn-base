@@ -1,0 +1,135 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter" t:type="Layout" t:pageTitle="title"
+    t:pageExplanation="pageExplanation">
+
+<div>
+	<t:zone t:id="formZone" id="formZone">
+	<form t:id="betForm" t:type="form" t:zone="formZone">
+	<t:errors/>
+
+	<t:if test="betType">
+	
+		<table class="bet">
+		
+		<tr>
+			<td colspan="2"><h3>${betType.Event.Name}</h3></td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong><t:output value="betType.Event.Date.Time" format="dateFormat"/></strong></td>
+		</tr>	
+		<tr>
+			<td colspan="2"><strong><t:output value="betType.Event.Date.Time" format="HourFormat"/></strong></td>
+		</tr>
+		<tr>
+			<td colspan="2"><br/><strong>${betType.Question}</strong></td>
+		</tr>
+		
+
+		<tr>
+			<td><br/><strong>${message:option-label}</strong></td>
+			<td><br/><strong>${message:rateprofif-label}</strong></td>
+		</tr>
+			
+		
+		<t:radiogroup t:id="betOptionRadioGroup" value="selectedBetOption" encoder="betOptionEncoder">
+		
+			<tr t:type="Loop"  t:source="betOptions" t:value="betOption"  encoder="betOptionEncoder">
+				<td  class="bets">
+				<t:if test="started">
+				<p:else>
+					<t:if test="userSession">
+						<t:if test="userSession.admin">
+						<p:else>
+							<t:radio t:id="radio" value="betOption"/>
+						</p:else>
+						</t:if>
+					</t:if>
+				</p:else>
+				</t:if>
+				
+				<t:label for="radio"> ${betOption.option}</t:label>
+				
+				</td>
+				<td>
+					<t:label for="radio">
+						<t:output value="betOption.rateProfit" format="numberFormat"/>
+					</t:label>
+				</td>
+			</tr>
+	
+		</t:radiogroup>	
+		<t:if test="started">
+		<tr>
+			<td colspan="2"><br/>
+				<strong style="color:red">${message:eventStarted}</strong>
+			</td>
+		</tr>
+		<p:else>
+			<t:if test="userSession">
+				<t:if test="userSession.admin">
+				<p:else>
+				<tr>
+					<div class="field">   
+					<td><br/>
+						<strong><t:label for="amount"/></strong>
+					</td>
+					</div>
+					<td><br/>
+						<span class="entry">    
+						<input t:id="amount" t:type="TextField"
+					       t:validate="required, min=0" 
+					       size="8" />
+						</span>
+					
+					</td>
+					
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="button">
+							<input type="submit" value="${message:button-bet}"/>
+						</div>
+					</td>
+				</tr>
+				</p:else>
+				</t:if>
+			</t:if>
+		</p:else>
+		</t:if>
+				
+		</table>
+		
+			<t:if test="NotBetEmpty">
+				<p style="color:green;font-size:15px;"><strong>${message:betDone}</strong></p>
+
+				<p style="color:green;font-size:13px;">${message:youBet}<strong> ${bet.money} </strong>${message:on} <strong>${bet.betOption.option}.</strong></p>
+			</t:if>	
+		
+		<p>
+			<a href="#" t:type="PageLink" t:page="eventinformation" t:context="betType.Event.EventId">${message:back}</a>		       
+		</p>
+
+		<noscript>
+			${message:javascript_required}
+		</noscript>
+
+		<t:if test="userSession">
+			<p:else>
+				<a href="#"  t:name="authenticateForBet" t:type="PageLink" t:page="user/login">${message:authForBet}</a>		       
+			</p:else>
+		</t:if>
+	<p:else>
+		<p>${message:betTypeNotFound}</p>
+	</p:else>
+	
+	</t:if>
+	</form>
+	<!--  </form> -->	
+	</t:zone>
+</div>
+
+<br/>
+
+
+
+</html>
